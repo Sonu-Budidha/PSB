@@ -1,0 +1,78 @@
+🚀 Project 03: Serverless Guestbook with AWS Lambda, API Gateway & DynamoDB
+🎤 Introduction
+
+In the last project, you connected an EC2 web app to a managed RDS database.
+In this project, you’ll build a fully serverless web application using:
+
+AWS Lambda → backend logic (no servers to manage).
+
+Amazon API Gateway → API endpoints (POST/GET).
+
+Amazon DynamoDB → NoSQL database to store messages.
+
+Static Website (HTML/JS) → simple guestbook UI hosted on S3 or EC2.
+
+By the end, you will have:
+
+🌍 A web guestbook where users can submit and view messages.
+⚡ A backend running fully on Lambda (pay-per-use, serverless).
+🗄 Data stored securely in DynamoDB.
+🔗 API Gateway connecting frontend ↔ backend.
+
+🏛 Step 1 – Create DynamoDB Table
+
+Go to DynamoDB → Tables → Create Table
+
+Table Name: project6th
+
+Partition Key: id (String)
+
+✅ Why? This is where all guestbook messages will be stored.
+
+🔗 Step 2 – Create Lambda Functions
+
+You need two Lambda functions:
+
+📩 Function 1: project6th-post (POST messages)
+📜 Function 2: project6th-get (GET messages)
+
+✅ Why? One Lambda saves messages, the other retrieves them.
+
+🌐 Step 3 – Setup API Gateway
+
+Go to API Gateway → Create API → HTTP API.
+
+Create two routes:
+
+POST /messages → Integrates with project6th-post Lambda.
+
+GET /messages → Integrates with project6th-get Lambda.
+
+Enable CORS (so frontend can call API).
+
+Deploy API → note down API endpoint (e.g., https://xxxxx.execute-api.us-east-1.amazonaws.com/New/messages).
+
+✅ Why? API Gateway exposes your Lambda as REST endpoints.
+
+🖥 Step 4 – Create Frontend (index.html)
+
+Save this file as index.html:
+
+
+🗂 Step 5 – Host the Frontend
+
+You can host index.html on:
+
+S3 (Static Website Hosting)
+
+EC2 (Apache/Nginx)
+
+Or even CloudFront + S3 for global delivery.
+
+Open the site in browser → try submitting a message → check DynamoDB table.
+
+🎯 End Result
+
+✔ Users submit messages → API Gateway → Lambda → DynamoDB.
+✔ Messages can be retrieved and displayed on the website.
+✔ Fully serverless architecture → no servers to manage.
