@@ -1,15 +1,13 @@
 🚀 Project 03: Serverless Guestbook with AWS Lambda, API Gateway & DynamoDB
+-----------------------------------------------------------------------------
 🎤 Introduction
 
 In the last project, you connected an EC2 web app to a managed RDS database.
 In this project, you’ll build a fully serverless web application using:
 
 AWS Lambda → backend logic (no servers to manage).
-
 Amazon API Gateway → API endpoints (POST/GET).
-
 Amazon DynamoDB → NoSQL database to store messages.
-
 Static Website (HTML/JS) → simple guestbook UI hosted on S3 or EC2.
 
 By the end, you will have:
@@ -20,6 +18,7 @@ By the end, you will have:
 🔗 API Gateway connecting frontend ↔ backend.
 
 🏛 Step 1 – Create DynamoDB Table
+-----------------------------------------------------------------------------
 
 Go to DynamoDB → Tables → Create Table
 
