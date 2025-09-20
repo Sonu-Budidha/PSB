@@ -29,23 +29,27 @@ Partition Key: id (String)
 ✅ Why? This is where all guestbook messages will be stored.
 
 🔗 Step 2 – Create Lambda Functions
+-----------------------------------------------------------------------------
 
 You need two Lambda functions:
 
-📩 Function 1: project6th-post (POST messages)
-📜 Function 2: project6th-get (GET messages)
+📩 Function 1: lamda-post (POST messages)
+📜 Function 2: lambda-get (GET messages)
+
+These both files are present in this Repo
 
 ✅ Why? One Lambda saves messages, the other retrieves them.
 
 🌐 Step 3 – Setup API Gateway
+-----------------------------------------------------------------------------
 
 Go to API Gateway → Create API → HTTP API.
 
 Create two routes:
 
-POST /messages → Integrates with project6th-post Lambda.
+POST /messages → Integrates with lamda-post Lambda.
 
-GET /messages → Integrates with project6th-get Lambda.
+GET /messages → Integrates with lambda-get  Lambda.
 
 Enable CORS (so frontend can call API).
 
@@ -54,12 +58,12 @@ Deploy API → note down API endpoint (e.g., https://xxxxx.execute-api.us-east-1
 ✅ Why? API Gateway exposes your Lambda as REST endpoints.
 
 🖥 Step 4 – Create Frontend (index.html)
+-----------------------------------------------------------------------------
 
-Save this file as index.html:
-
+The index.html is present in this Repo
 
 🗂 Step 5 – Host the Frontend
-
+-----------------------------------------------------------------------------
 You can host index.html on:
 
 S3 (Static Website Hosting)
