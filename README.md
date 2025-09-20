@@ -40,7 +40,15 @@ These both files are present in this Repo
 
 ✅ Why? One Lambda saves messages, the other retrieves them.
 
-🌐 Step 3 – Setup API Gateway
+
+🔑 Step 3 – Permissions
+-----------------------------------------------------------------------------
+
+Both Lambda functions need permission to access DynamoDB.
+
+Attach the policy AmazonDynamoDBFullAccess (or a custom one with just PutItem + Scan).
+
+🌐 Step 4 – Setup API Gateway
 -----------------------------------------------------------------------------
 
 Go to API Gateway → Create API → HTTP API.
@@ -57,12 +65,12 @@ Deploy API → note down API endpoint (e.g., https://xxxxx.execute-api.us-east-1
 
 ✅ Why? API Gateway exposes your Lambda as REST endpoints.
 
-🖥 Step 4 – Create Frontend (index.html)
+🖥 Step 5 – Create Frontend (index.html)
 -----------------------------------------------------------------------------
 
 The index.html is present in this Repo
 
-🗂 Step 5 – Host the Frontend
+🗂 Step 6 – Host the Frontend
 -----------------------------------------------------------------------------
 You can host index.html on:
 
