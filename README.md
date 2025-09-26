@@ -95,3 +95,16 @@ Finally, **upload the HTML files to your S3 bucket** and enable **Static Website
 ---
 
 ## 📂 Repository Structure
+
+/frontend
+├── login.html
+├── dashboard.html
+
+/lambdas
+├── users-post.py
+├── users-get.py
+├── products-post.py
+├── products-get.py
+├── orders-post.py
+├── orders-get.py
+
