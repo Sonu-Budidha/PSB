@@ -58,7 +58,7 @@ Create **6 Lambda functions** (Python) and attach **IAM role with DynamoDB permi
 - `orders-post.py` → Create an order  
 - `orders-get.py` → List all orders  
 
-📂 These scripts are already stored in the repo under `/lambdas/`.
+📂 These scripts are already stored in the repo under file name "all-lambda-functions".
 
 ---
 
@@ -75,7 +75,7 @@ Create **6 Lambda functions** (Python) and attach **IAM role with DynamoDB permi
 ---
 
 ### Step 4 – Frontend (UI)
-Use the two HTML pages already in the repo under `/frontend/`:  
+Use the two HTML pages already in the repo :  
 
 - `login.html` → Login page (stores username in browser local storage).  
 - `dashboard.html` → Main dashboard (Users, Products, Orders).  
